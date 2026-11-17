@@ -20,11 +20,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Configure Pages
-        uses: actions/configure-pages@v5`r`n        with:`r`n          enablement: true`r`n      - name: Upload artifact
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
-
